@@ -1,9 +1,80 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>ghjklçlkjhgfdsasdfghjklççlkjhgfdssdfghjklçlkjhgfdsasdfghjk</title>
-  </head>
-  <body>
-    <!-- Conteúdo visível para o usuário -->
-  </body>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merenda Escolar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #d4f7d0, #fff3c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #ffffff;
+      width: 300px;
+      padding: 30px 20px;
+      border-radius: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    h1 {
+      color: #2b593e;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .image-area {
+      margin-bottom: 25px;
+    }
+
+    .image-area img {
+      width: 120px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+    }
+
+    .btn-cardapio {
+      background: #f7931a;
+    }
+
+    .btn-solicitacoes {
+      background: #4caf50;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Merenda Escolar</h1>
+    <div class="image-area">
+      <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Merenda">
+    </div>
+    <a href="cardapio.html" class="btn btn-cardapio">🍽️ Cardápio</a>
+    <a href="solicitacoes.html" class="btn btn-solicitacoes">🥗 Solicitações</a>
+  </div>
+</body>
 </html>
+
+
