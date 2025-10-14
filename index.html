@@ -1,83 +1,178 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Merenda Escolar</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #d4f7d0, #fff3c4);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .container {
-      background: #ffffff;
-      width: 300px;
-      padding: 30px 20px;
-      border-radius: 25px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      text-align: center;
-    }
-
-    h1 {
-      color: #2b593e;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .image-area {
-      margin-bottom: 25px;
-    }
-
-    .image-area img {
-      width: 120px;
-    }
-
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 12px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      color: white;
-      text-decoration: none;
-      text-align: center;
-    }
-
-    .btn-cardapio {
-      background: #f7931a;
-    }
-
-    .btn-sugestoes {
-      background: #4caf50;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="menu">
     <h1>Merenda Escolar</h1>
     <div class="image-area">
       <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Merenda" />
     </div>
-    <a href="cardapio.html" class="btn btn-cardapio">🍽️ Cardápio</a>
-    <a href="sugestoes.html" class="btn btn-sugestoes">💡 Sugestões</a>
+    <button class="btn btn-cardapio" onclick="mostrarCardapio()"> Cardápio</button>
+    <button class="btn btn-sugestoes" onclick="mostrarSugestoes()">Sugestões</button>
   </div>
+
+  <!-- Seção do Cardápio -->
+  <div class="container content-section" id="cardapio">
+    <h1>Cardápio da Semana</h1>
+    <ul>
+      <li><strong>Segunda:</strong> Arroz, feijão, frango grelhado e salada</li>
+      <li><strong>Terça:</strong> Macarronada com carne moída e suco de laranja</li>
+      <li><strong>Quarta:</strong> Arroz, feijão, omelete e banana</li>
+      <li><strong>Quinta:</strong> Strogonoff, batata palha e gelatina</li>
+      <li><strong>Sexta:</strong> Sopa de legumes e pão integral</li>
+    </ul>
+    <div class="voltar">
+      <button class="btn btn-voltar" onclick="voltarMenu()">⬅️ Voltar</button>
+    </div>
+  </div>
+
+  <!-- Seção de Sugestões -->
+  <div class="container content-section" id="sugestoes">
+    <h1>Sugira uma Merenda</h1>
+    <form onsubmit="enviarSugestao(event)">
+      <label for="nome">Seu nome:</label>
+      <input type="text" id="nome" required />
+
+      <label for="sugestao">Sua sugestão:</label>
+      <textarea id="sugestao" rows="4" required></textarea>
+
+      <button class="btn btn-sugestoes" type="submit"> Enviar</button>
+    </form>
+    <div class="voltar">
+      <button class="btn btn-voltar" onclick="voltarMenu()">⬅ Voltar</button>
+    </div>
+  </div>
+
+  <script>
+    function mostrarCardapio() {
+      document.getElementById('menu').style.display = 'none';
+      document.getElementById('cardapio').style.display = 'block';
+    }
+
+    function mostrarSugestoes() {
+      document.getElementById('menu').style.display = 'none';
+      document.getElementById('sugestoes').style.display = 'block';
+    }
+
+    function voltarMenu() {
+      document.getElementById('menu').style.display = 'block';
+      document.getElementById('cardapio').style.display = 'none';
+      document.getElementById('sugestoes').style.display = 'none';
+    }
+
+    function enviarSugestao(event) {
+      event.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const sugestao = document.getElementById('sugestao').value;
+
+      if (nome && sugestao) {
+        alert(`Obrigado pela sugestão, ${nome}! \n\nVocê sugeriu: "${sugestao}"`);
+        voltarMenu();
+        document.getElementById('nome').value = '';
+        document.getElementById('sugestao').value = '';
+      }
+    }
+  </script>
 </body>
 </html>
+
+
+
+CSS 
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #d4f7d0, #fff3c4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #ffffff;
+  width: 320px;
+  padding: 30px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+h1 {
+  color: #2b593e;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.image-area {
+  margin-bottom: 25px;
+}
+
+.image-area img {
+  width: 120px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-cardapio {
+  background: #f7931a;
+}
+
+.btn-sugestoes {
+  background: #4caf50;
+}
+
+.btn-voltar {
+  background: #607d8b;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.content-section {
+  display: none;
+  text-align: left;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+label, input, textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+}
+
+.voltar {
+  text-align: center;
+}
+
 
 
 
