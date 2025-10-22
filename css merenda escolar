@@ -1,0 +1,94 @@
+ 
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #d4f7d0, #fff3c4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #ffffff;
+  width: 320px;
+  padding: 30px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+h1 {
+  color: #2b593e;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.image-area {
+  margin-bottom: 25px;
+}
+
+.image-area img {
+  width: 120px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-cardapio {
+  background: #f7931a;
+}
+
+.btn-sugestoes {
+  background: #4caf50;
+}
+
+.btn-voltar {
+  background: #607d8b;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.content-section {
+  display: none;
+  text-align: left;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+label, input, textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+}
+
+.voltar {
+  text-align: center;
+}
+
+
+
+
+
