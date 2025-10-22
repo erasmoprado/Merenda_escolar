@@ -1,0 +1,11 @@
+REQUISITOS FUNCIONAIS (RF)
+
+  [RF-001] Botão de Cardapio
+  Descrição: O botão deve permitir que o usuario acesse o cardapio.
+  Prioridade: Alta
+  Entrada: Usuario clica no botão. 
+  Saída: Usuario acessa a tela do cardapio.
+  Regras de Negócio: O usuario deve ter internet.
+  Atores: Alunos e Professores.
+
+REQUISITOS NÃO FUNCIONAIS (RNF)
