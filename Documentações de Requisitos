@@ -7,5 +7,12 @@ REQUISITOS FUNCIONAIS (RF)
   Saída: Usuario acessa a tela do cardapio.
   Regras de Negócio: O usuario deve ter internet.
   Atores: Alunos e Professores.
+  Descrição: O botão deve permitir que o usuario acesse o cardapio.
+  Prioridade: Alta
+  Entrada: Usuario clica no botão. 
+  Saída: Usuario acessa a tela do cardapio.
+  Regras de Negócio: O usuario deve ter internet.
+  Atores: Alunos e Professores.
+
 
 REQUISITOS NÃO FUNCIONAIS (RNF)
