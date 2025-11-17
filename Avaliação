@@ -1,0 +1,6 @@
+Notei alguns pontos importantes no trabalho prático de vocês: 
+- O nome dos arquivos estão incorretos, vocês precisam criar arquivos contendo nome sem espaço e com a extensão correta, por exemplo: login.html, principal.js
+- Como o nome dos seus respectivos arquivos estão incorretos, o código está buscando uma referência inexistente, por exemplo: no codigo HTML ele está buscando um arquivo chamado style.css que não existe
+e com isso todo o codigo CSS não vai funcionar.
+- O mesmo acontece com o JavaScript.
+- Vocês não realizaram NENHUMA alteração no código esse mês, sendo que tivemos aulas práticas para realizar novas implementações.
