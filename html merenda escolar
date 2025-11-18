@@ -7,31 +7,32 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Menu inicial -->
   <div class="container" id="menu">
     <h1>Merenda Escolar</h1>
     <div class="image-area">
       <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Merenda" />
     </div>
-    <button class="btn btn-cardapio" onclick="mostrarCardapio()"> Cardápio</button>
+    <button class="btn btn-cardapio" onclick="mostrarCardapio()">Cardápio</button>
     <button class="btn btn-sugestoes" onclick="mostrarSugestoes()">Sugestões</button>
   </div>
 
-  
+  <!-- Cardápio -->
   <div class="container content-section" id="cardapio">
     <h1>Cardápio da Semana</h1>
     <ul>
       <li><strong>Segunda:</strong> Arroz, feijão, frango ao molho e suco</li>
-      <li><strong>Terça:</strong> Arroz, feijao macarrão e suco</li>
-      <li><strong>Quarta:</strong> Arroz, feijão, mix de carnes banana e suco</li>
+      <li><strong>Terça:</strong> Arroz, feijão, macarrão e suco</li>
+      <li><strong>Quarta:</strong> Arroz, feijão, mix de carnes, banana e suco</li>
       <li><strong>Quinta:</strong> Strogonoff, batata palha e suco</li>
-      <li><strong>Sexta:</strong> Arroz, feijão carne suina e suco</li>
+      <li><strong>Sexta:</strong> Arroz, feijão, carne suína e suco</li>
     </ul>
     <div class="voltar">
       <button class="btn btn-voltar" onclick="voltarMenu()">⬅️ Voltar</button>
     </div>
   </div>
 
-  
+  <!-- Sugestões -->
   <div class="container content-section" id="sugestoes">
     <h1>Sugira uma Merenda</h1>
     <form onsubmit="enviarSugestao(event)">
@@ -41,42 +42,14 @@
       <label for="sugestao">Sua sugestão:</label>
       <textarea id="sugestao" rows="4" required></textarea>
 
-      <button class="btn btn-sugestoes" type="submit"> Enviar</button>
+      <button class="btn btn-sugestoes" type="submit">Enviar</button>
     </form>
     <div class="voltar">
-      <button class="btn btn-voltar" onclick="voltarMenu()">⬅ Voltar</button>
+      <button class="btn btn-voltar" onclick="voltarMenu()">⬅️ Voltar</button>
     </div>
   </div>
 
-  <script>
-    function mostrarCardapio() {
-      document.getElementById('menu').style.display = 'none';
-      document.getElementById('cardapio').style.display = 'block';
-    }
-
-    function mostrarSugestoes() {
-      document.getElementById('menu').style.display = 'none';
-      document.getElementById('sugestoes').style.display = 'block';
-    }
-
-    function voltarMenu() {
-      document.getElementById('menu').style.display = 'block';
-      document.getElementById('cardapio').style.display = 'none';
-      document.getElementById('sugestoes').style.display = 'none';
-    }
-
-    function enviarSugestao(event) {
-      event.preventDefault();
-      const nome = document.getElementById('nome').value;
-      const sugestao = document.getElementById('sugestao').value;
-
-      if (nome && sugestao) {
-        alert(`Obrigado pela sugestão, ${nome}! \n\nVocê sugeriu: "${sugestao}"`);
-        voltarMenu();
-        document.getElementById('nome').value = '';
-        document.getElementById('sugestao').value = '';
-      }
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
+
