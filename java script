@@ -1,39 +1,35 @@
+function esconderTodas() {
+  document.getElementById("menu").style.display = "none";
+  document.getElementById("cardapio").style.display = "none";
+  document.getElementById("sugestoes").style.display = "none";
+}
+
 function mostrarCardapio() {
-  esconderTodasAsSessoes();
-  document.getElementById('cardapio').style.display = 'block';
+  esconderTodas();
+  document.getElementById("cardapio").style.display = "block";
 }
 
 function mostrarSugestoes() {
-  esconderTodasAsSessoes();
-  document.getElementById('sugestoes').style.display = 'block';
+  esconderTodas();
+  document.getElementById("sugestoes").style.display = "block";
 }
 
 function voltarMenu() {
-  esconderTodasAsSessoes();
-  document.getElementById('menu').style.display = 'block';
+  esconderTodas();
+  document.getElementById("menu").style.display = "block";
 }
 
-function esconderTodasAsSessoes() {
-  document.getElementById('menu').style.display = 'none';
-  document.getElementById('cardapio').style.display = 'none';
-  document.getElementById('sugestoes').style.display = 'none';
-}
+document.getElementById("formSugestao").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-function enviarSugestao(event) {
-  event.preventDefault();
+  const nome = document.getElementById("nome").value.trim();
+  const sugestao = document.getElementById("sugestao").value.trim();
 
-  const nome = document.getElementById('nome').value.trim();
-  const sugestao = document.getElementById('sugestao').value.trim();
+  alert("Obrigado pela sugestão, " + nome + "!\n\nVocê sugeriu: \"" + sugestao + "\"");
 
-  if (nome && sugestao) {
-    alert(`Obrigado pela sugestão, ${nome}!\n\nVocê sugeriu: "${sugestao}"`);
+  document.getElementById("nome").value = "";
+  document.getElementById("sugestao").value = "";
 
-    document.getElementById('nome').value = '';
-    document.getElementById('sugestao').value = '';
-
-    voltarMenu();
-  } else {
-    alert("Por favor, preencha todos os campos!");
-  }
-}
+  voltarMenu();
+});
 
