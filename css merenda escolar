@@ -23,10 +23,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-.image-area {
-  margin-bottom: 25px;
-}
-
 .image-area img {
   width: 120px;
 }
@@ -42,8 +38,6 @@ h1 {
   font-weight: bold;
   cursor: pointer;
   color: white;
-  text-decoration: none;
-  text-align: center;
 }
 
 .btn-cardapio {
@@ -56,11 +50,6 @@ h1 {
 
 .btn-voltar {
   background: #607d8b;
-  margin-top: 20px;
-}
-
-.btn:hover {
-  opacity: 0.9;
 }
 
 .content-section {
@@ -81,12 +70,4 @@ label, input, textarea {
 textarea {
   resize: none;
 }
-
-.voltar {
-  text-align: center;
-}
-
-
-
-
 
